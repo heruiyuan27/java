@@ -74,9 +74,109 @@ SQL分类
 
 --------------------
 
-## DDL
+## DDL操作数据库、表
 
+### 1操作数据库 CRUD+use
 
+**C(Create):创建**
+
+1. * 创建数据库：
+		* ==create database 数据库名称==;
+	* 创建数据库，判断不存在，再创建：
+		* create database if not exists 数据库名称;
+	* 创建数据库，并指定字符集
+		* create database 数据库名称==character set 字符集名==;
+	
+* 练习： 创建db4数据库，判断是否存在，并制定字符集为gbk
+		* create database if not exists db4 character set gbk;
+2. **R(Retrieve)：查询**
+	* 查询所有数据库的名称:
+		* ==show databases==;
+	* 查询某个数据库的字符集:查询某个数据库的创建语句
+		* ==show create database 数据库名称==;
+3. **U(Update):修改**
+	* 修改数据库的字符集
+		* ==alter database 数据库名称 character set 字符集名称==;
+4. D(Delete):删除
+	* 删除数据库
+		* ==drop database 数据库名称==;
+	* 判断数据库存在，存在再删除
+		* drop database if exists 数据库名称;
+5. 使用数据库
+	* 查询当前正在使用的数据库名称
+		* ==select database()==;
+	* 使用数据库
+		* ==use 数据库名称==;
+
+### 2操作表CRUD
+
+前提：use db1；使用某个数据库
+
+--------------------------
+
+1. C(Create):创建
+
+   创建表
+   ==create table student3==(
+   			id int,
+   			name varchar(32),
+   			age int ,
+   			score double(4,1),
+   			birthday date,
+   			insert_time timestamp
+   		);
+
+   ![image-20200111192207010](C:\Users\Hery\Desktop\GitHub\java\image\image-20200111192207010.png)
+
+   	* 复制表：
+   		* ==create table 表名 like 被复制的表名==;	 
+
+2. R(Retrieve)：查询
+     * ==show tables==; 数据库下的表格
+     * ==show create table student==;
+     * ==desc 表名==; 具体表格的结构
+
+  3. U(Update)：修改
+
+     		1. 修改表名
+     			alter table 表名 rename to 新的表名;
+     		2. 修改表的字符集
+     			alter table 表名 character set 字符集名称;
+     		3. 添加一列
+     			alter table 表名 add 列名 数据类型;
+     		4. 修改列名称 类型
+     			alter table 表名 change 列名 新列别 新数据类型;
+     			alter table 表名 modify 列名 新数据类型;
+     		5. 删除列
+     			alter table 表名 drop 列名;
+
+4. D(Delete):删除
+		* ==drop table 表名==;
+	* drop table  if exists 表名 ;
+
+## DML增删改表中数据
+
+1. 添加数据:
+
+   insert into student (id,name) values(1,'sun')
+
+   insert into student values(2,'zh','man','tju')
+
+2. 删除数据：
+
+   delete from student where id=4;
+
+   delete from student;删除所有
+
+3. 更新数据:
+
+   update student set sex='woman';
+
+   update student set sex='man' where id=2;
+
+   update student set age=1,address='bj' where id=3;
+
+   
 
 
 
