@@ -78,15 +78,12 @@ SQL分类
 
 ### 1操作数据库 CRUD+use
 
-**C(Create):创建**
+1. **C(Create):创建**
 
-1. * 创建数据库：
-		* ==create database 数据库名称==;
-	* 创建数据库，判断不存在，再创建：
-		* create database if not exists 数据库名称;
-	* 创建数据库，并指定字符集
-		* create database 数据库名称==character set 字符集名==;
-	
+创建数据库：
+* ==create database 数据库名称==;
+* create database if not exists 数据库名称;
+* create database 数据库名称==character set 字符集名==;
 * 练习： 创建db4数据库，判断是否存在，并制定字符集为gbk
 		* create database if not exists db4 character set gbk;
 2. **R(Retrieve)：查询**
@@ -136,19 +133,20 @@ SQL分类
      * ==show create table student==;
      * ==desc 表名==; 具体表格的结构
 
-  3. U(Update)：修改
+3. U(Update)：修改
 
-     		1. 修改表名
-     			alter table 表名 rename to 新的表名;
-     		2. 修改表的字符集
-     			alter table 表名 character set 字符集名称;
-     		3. 添加一列
-     			alter table 表名 add 列名 数据类型;
-     		4. 修改列名称 类型
-     			alter table 表名 change 列名 新列别 新数据类型;
-     			alter table 表名 modify 列名 新数据类型;
-     		5. 删除列
-     			alter table 表名 drop 列名;
+     	1. 修改表名
+          	alter table 表名 rename to 新的表名;
+     	2. 修改表的字符集
+
+     		alter table 表名 character set 字符集名称;
+     	3. 添加一列
+     		alter table 表名 add 列名 数据类型;
+     	4. 修改列名称 类型
+     		alter table 表名 change 列名 新列别 新数据类型;
+     		alter table 表名 modify 列名 新数据类型;
+     	5. 删除列
+     		alter table 表名 drop 列名;
 
 4. D(Delete):删除
 		* ==drop table 表名==;
@@ -176,11 +174,75 @@ SQL分类
 
    update student set age=1,address='bj' where id=3;
 
-   
+## DQL：查询表中的记录
 
+###语法
+select
+	字段列表
+from
+	表名列表
+where
+	条件列表
 
+group by
+	分组字段
+having
+	分组之后的条件
+order by
+	排序
+limit
+	分页限定
 
+### 基础查询
 
+select * from student
+
+select name,age from student
+
+select name as 姓名,age as 年龄 from student
+
+------------------------
+
+select address from student
+
+select ==distinct==  address from student
+
+-------------------------------------------
+
+select math+5 from student
+
+select * ,(math+english) as total from student
+
+### 条件查询
+
+**运算符**：
+\> 、< 、<= 、>= 、= 、<>
+BETWEEN...AND  :
+
+​		SELECT * FROM student WHERE age BETWEEN 20 AND 30;
+IN( 集合) :
+
+​		SELECT * FROM student WHERE age IN (22,18,25);
+LIKE(模糊查询)：
+
+| %      | 匹配任意多个字符串 |
+| ------ | ------------------ |
+| **_ ** | **匹配一个字符**   |
+
+​		select * from student3 where name like '%德%';  
+
+​		select * from student3 where name like '%德'; 
+
+​		select * from student3 where name like '德%';  
+
+​		select * from student3 where name like '_德';  
+
+IS NULL:
+
+​		select * from student3 where english is null;  
+and  或 &&
+or  或 || 
+not  或 !
 
 
 
