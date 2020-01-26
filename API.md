@@ -1,4 +1,4 @@
-# Math
+# Math（静态）
 
 Math类中无构造方法，但内部的方法都是==静态==的，则可以通过 类名**.**进行调用  
 
@@ -15,7 +15,7 @@ Math类中无构造方法，但内部的方法都是==静态==的，则可以通
 | public static double pow (double a,double b) | 返回a的b次幂的值                                |
 | public static double random()                | 返回值为double的正值，[0.0,1.0)                 |
 
-# System
+# System（静态）
 
 属于java.lang 不用import
 
@@ -41,7 +41,7 @@ Object 是类层次结构的根，每个类都可以将 Object 作为超类。�
 
 alt+insert 重写toString
 
-```
+```java
 @Override
     public String toString() {
         return "Student{" +
@@ -55,11 +55,11 @@ alt+insert 重写toString
 
 alt+insert 重写equals
 
-不重写情况下，equals比较对象的地址
+**不重写情况下，equals比较对象的地址**
 
 重写后，比较内容
 
-```
+```java
 @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -111,7 +111,12 @@ public class Maopao {
 }
 ```
 
-# Array
+# Array（静态）
+
+| 方法名                                 | 说明                               |
+| -------------------------------------- | ---------------------------------- |
+| public static String toString(int[] a) | 返回指定数组的内容的字符串表示形式 |
+| public static void sort(int[] a)       | 按照数字顺序排列指定的数组         |
 
 ```java
 import java.util.Arrays;
@@ -129,3 +134,27 @@ import java.util.Arrays;
 工具类设计思想
 1、构造方法用 private 修饰
 2、成员用 public static 修饰  
+
+# 基本数据类型包装类
+
+## int 2 str
+
+```java
+ int num=1;
+ String s=String.valueOf(num);
+```
+
+## str 2 int
+
+```java
+String str="222";
+int y=Integer.parseInt(str);
+```
+
+## 自动装箱拆箱
+
+```java
+ Integer i=100;//自动装箱
+ i+=500;//先拆后装
+```
+
