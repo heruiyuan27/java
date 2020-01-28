@@ -1,6 +1,6 @@
-# Math（静态）
+# Math（lang静态）
 
-Math类中无构造方法，但内部的方法都是==静态==的，则可以通过 类名**.**进行调用  
+Math类中无构造方法，但内部的方法都是==静态==的，则可以通过 ==类名.== 进行调用  
 
 属于java.lang 不用import
 
@@ -15,7 +15,7 @@ Math类中无构造方法，但内部的方法都是==静态==的，则可以通
 | public static double pow (double a,double b) | 返回a的b次幂的值                                |
 | public static double random()                | 返回值为double的正值，[0.0,1.0)                 |
 
-# System（静态）
+# System（lang静态）
 
 属于java.lang 不用import
 
@@ -111,7 +111,7 @@ public class Maopao {
 }
 ```
 
-# Array（静态）
+# Array（util静态）
 
 | 方法名                                 | 说明                               |
 | -------------------------------------- | ---------------------------------- |
@@ -128,11 +128,10 @@ public class ArrayDemo {
         System.out.println(Arrays.toString(arr));
     }
 }
-import java.util.Arrays;
 ```
 
-工具类设计思想
-1、构造方法用 private 修饰
+==工具类设计思想==
+1、**构造方法用 private 修饰**
 2、成员用 public static 修饰  
 
 # 基本数据类型包装类
@@ -156,5 +155,53 @@ int y=Integer.parseInt(str);
 ```java
  Integer i=100;//自动装箱
  i+=500;//先拆后装
+```
+
+# Date（静态）
+
+| 方法名                 | 说明                                                         |
+| ---------------------- | ------------------------------------------------------------ |
+| public Date()          | 分配一个 Date对象，并初始化，以便它代表它被分配的时间，精确到毫秒 |
+| public Date(long date) | 分配一个 Date对象，并将其初始化为表示从标准基准时间起指定的毫秒数 |
+
+| 方法名                         | 说明                                                  |
+| ------------------------------ | ----------------------------------------------------- |
+| public long getTime()          | 获取的是日期对象从1970年1月1日 00:00:00到现在的毫秒值 |
+| public void setTime(long time) | 设置时间，给的是毫秒值                                |
+
+# SimpleDateFormat（util静态）
+
+## date 2 str
+
+```java
+Date d=new Date();//日期对象
+SimpleDateFormat sdf=new SimpleDateFormat();//日期格式对象
+String s=sdf.format(d);
+System.out.println(s);
+```
+
+##str 2 date
+
+```java
+String ss="2019-02-18 15:30:30";
+SimpleDateFormat sdf2=new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
+Date dd=sdf2.parse(ss);
+System.out.println(dd);
+```
+
+# Calendar(util非静态)
+
+```java
+/*
+        获取任何一年的二月有多少天
+*/
+System.out.println("please input the year");
+Scanner sc=new Scanner(System.in);
+int year=sc.nextInt();
+Calendar c = Calendar.getInstance();//日历对象
+c.set(year,2,1);//set方法，3月1日
+c.add(Calendar.DATE,-1);//add方法，字段，+-数值
+System.out.println(c.get(Calendar.DATE));
+
 ```
 
