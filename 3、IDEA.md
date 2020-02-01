@@ -1,5 +1,3 @@
-# IDEA
-
 1、创建一个空项目（JavaSE_Code)  →IdeaProjects目录下
 
 2、创建一个新模块→myClass
@@ -10,19 +8,17 @@
 
 --------------------
 
-## 项目结构
+#文件结构
 
 Project
 
-Module
+Module→==project structure==
 
 Package
 
 Class
 
-→==project structure==
-
-## 快捷键
+#快捷键
 
 | 快捷键             | 功能                                   |
 | ------------------ | -------------------------------------- |
@@ -37,3 +33,30 @@ Class
 psvm=public static void main（String[] args）
 
 sout=System.out.println（）
+
+#Debug
+
+设置断点
+
+F7 go ahead
+
+- Console查看输出，或者是键盘录入
+- Frames查看调用方法
+- Variables查看变量
+
+
+
+#类
+
+ALT+INSERT
+
+无参构造
+
+有参构造
+
+get/set方法
+
+
+
+#异常
+
