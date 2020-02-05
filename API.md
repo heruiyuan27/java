@@ -32,7 +32,7 @@ long end=System.currentTimeMillis()
 
 long end-long start
 
-# object
+# Object
 
 Object 是类层次结构的根，每个类都可以将 Object 作为超类。所有类都直接或者间接的继承自该类，
 换句话说，该类所具备的方法，所有类都会有一份  
@@ -193,7 +193,7 @@ System.out.println(dd);
 
 ```java
 /*
-        获取任何一年的二月有多少天
+   获取任何一年的二月有多少天
 */
 System.out.println("please input the year");
 Scanner sc=new Scanner(System.in);
