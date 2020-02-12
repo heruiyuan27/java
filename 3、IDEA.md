@@ -34,6 +34,8 @@ psvm=public static void main（String[] args）
 
 sout=System.out.println（）
 
+修改相同文字：shift+F6
+
 #Debug
 
 设置断点
