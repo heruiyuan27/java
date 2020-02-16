@@ -1,4 +1,4 @@
-# Math（lang静态）
+# Math（java.lang静态）
 
 Math类中无构造方法，但内部的方法都是==静态==的，则可以通过 ==类名.== 进行调用  
 
@@ -15,7 +15,7 @@ Math类中无构造方法，但内部的方法都是==静态==的，则可以通
 | public static double pow (double a,double b) | 返回a的b次幂的值                                |
 | public static double random()                | 返回值为double的正值，[0.0,1.0)                 |
 
-# System（lang静态）
+#System（java.lang静态）
 
 属于java.lang 不用import
 
@@ -111,7 +111,7 @@ public class Maopao {
 }
 ```
 
-# Array（util静态）
+# Arrays（util静态）
 
 | 方法名                                 | 说明                               |
 | -------------------------------------- | ---------------------------------- |
@@ -130,7 +130,8 @@ public class ArrayDemo {
 }
 ```
 
-#==工具类设计思想==
+#工具类设计思想
+
 1、**构造方法用 private 修饰**
 2、**成员用 public static 修饰  **
 
@@ -157,7 +158,7 @@ int y=Integer.parseInt(str);
  i+=500;//先拆后装
 ```
 
-# Date（静态）
+# Date（util静态）
 
 | 方法名                 | 说明                                                         |
 | ---------------------- | ------------------------------------------------------------ |
