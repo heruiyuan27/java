@@ -1,3 +1,13 @@
+# Random
+
+##1. 导入包
+import java.util.Random;
+##2. 创建对象
+Random r = new Random();
+##3. 产生随机数
+int num = r.nextInt(10);
+
+> 10代表的是一个范围，如果括号写10，产生的随机数就是0-9
 # Math（java.lang静态）
 
 Math类中无构造方法，但内部的方法都是==静态==的，则可以通过 ==类名.== 进行调用  
