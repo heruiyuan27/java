@@ -2,13 +2,11 @@
 
 ## 介绍
 
-跨平台原理 win mac linux
+跨平台【win mac linux】原理:通过JVM【java虚拟机】实现
 
-通过jvm ，即java虚拟机实现
+JRE(java runtime environment)=JVM+核心类库
 
-JRE(java runtime environment)=jvm+核心类库
-
-JDK(java development kit)=jre+javac.exe+java.exe
+JDK(java development kit)=JRE+javac.exe+java.exe
 
 ##简单操作
 
@@ -28,13 +26,17 @@ exit
 
 java源程序 .java
 
-↓
+​			↓
 
-编译器compi
+编译器compiler
 
-↓
+​			↓
 
-java字节码文件 .class  →JVM
+java字节码文件 .class
+
+​			↓
+
+ 		 JVM
 
 ------------------
 
@@ -46,11 +48,11 @@ java  HelloWorld
 
 -------------------------
 
-非法字符一般是中英文符号问题
+- 非法字符一般是中英文符号问题
 
-1.至少要有一个自定义类
+1. 至少要有一个自定义类
 
-2.有且仅有一个主类 main（）
+2. 有且仅有一个主类 main（）
 
 #文件结构
 
@@ -102,11 +104,15 @@ F7 go ahead
 
 #ALT+INSERT
 
-无参构造
-
-有参构造
+无参构造+有参构造
 
 get/set方法
+
+equals()
+
+toString()
+
+
 
 
 
