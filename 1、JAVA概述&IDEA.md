@@ -8,21 +8,7 @@ JRE(java runtime environment)=JVM+核心类库
 
 JDK(java development kit)=JRE+javac.exe+java.exe
 
-##简单操作
-
-e:
-
-dir
-
-cd cd1\2 前进 /多级前进
-
-cd.. cd\   回退 /多级回退
-
-cls清屏
-
-exit
-
---------------------------------
+-------------------------
 
 java源程序 .java
 
@@ -40,7 +26,7 @@ java字节码文件 .class
 
 ------------------
 
-eg
+eg.
 
 javac HelloWorld.java
 
@@ -53,6 +39,72 @@ java  HelloWorld
 1. 至少要有一个自定义类
 
 2. 有且仅有一个主类 main（）
+
+##DOS简单操作
+
+dir,cd, md,rd,copy,del等
+
+### dir
+
+```
+dir C:\develop\Java\jdk-11.0.5\bin\javac.exe
+dir C:\users\hery
+dir /p
+```
+
+当前目录：命名提示符所在的路径 C:\Users\Hery>
+
+父目录：     ..
+
+当前目录：  .
+
+根目录:        \  
+
+相对路径 C:\Users\Hery>dir PycharmProjects
+
+绝对路径 C:\Users\Hery>dir C:\Users\Hery\PycharmProjects
+
+###cd
+
+cd命令只能进入当前盘符中的目录，其中“cd \”为返回到根目录，“cd..”为返回到上一层目录。
+
+cd 或cd1\2 →前进 或多级前进
+
+### md
+
+举例：md temp
+
+表示在当前盘符下建立一个名为temp的目录。
+
+### rd
+
+举例：rd temp
+
+表示删除当前路径下的temp目录，需要注意的是，此命令只能删除空目录。
+
+### copy
+
+举例1：copy c:\*.com d:\"
+
+表示将c盘根目录下所有扩展名为com的文件拷贝到d盘根目录中。
+
+举例2：copy c:\autoexec.bat c:\autoexec.bak
+
+表示将autoexec.bat文件复制成为扩展名为bak的文件。输入dir命令，可以发现此变化。
+
+### del
+
+举例：del c:\ *.bak  /p
+
+表示删除当前目录下所有扩展名为bak的文件，
+
+参数/p表示可以使用户在删除多个文件时对每个文件都显示删除询问。
+
+###其他
+
+cls清屏
+
+exit
 
 #文件结构
 
