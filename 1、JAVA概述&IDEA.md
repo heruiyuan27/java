@@ -40,7 +40,7 @@ java  HelloWorld
 
 2. 有且仅有一个主类 main（）
 
-##DOS简单操作
+#DOS简单操作
 
 dir,cd, md,rd,copy,del等
 
@@ -129,8 +129,8 @@ Class
 | 快捷键             | 功能                                   |
 | ------------------ | -------------------------------------- |
 | ==Alt+Enter==      | 导入包，自动修正代码                   |
-| Ctrl+Y             | 删除光标所在行                         |
-| Ctrl+D             | 复制光标所在行的内容，插入光标位置下面 |
+| ==Ctrl+Y==         | 删除光标所在行                         |
+| ==Ctrl+D==         | 复制光标所在行的内容，插入光标位置下面 |
 | ==Ctrl+Alt+L==     | 格式化代码                             |
 | ==Ctrl+/==         | 单行注释                               |
 | ==Ctrl+Shift+/==   | 选中代码注释，多行注释，再按取消注释   |
@@ -139,6 +139,8 @@ Class
 psvm=public static void main（String[] args）
 
 sout=System.out.println（）
+
+iter增强for
 
 修改相同文字：shift+F6
 
@@ -166,6 +168,7 @@ toString()
 
 
 
+# ALT+ENTER
 
 
 
@@ -173,4 +176,6 @@ toString()
 
 
 
+ctrl+f寻找
 
+ctrl+r替换
