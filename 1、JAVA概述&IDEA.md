@@ -1,12 +1,14 @@
 # JAVA概述
 
-## 介绍
-
 跨平台【win mac linux】原理:通过JVM【java虚拟机】实现
 
-JRE(java runtime environment)=JVM+核心类库
+JRE 是Java运行时环境
 
-JDK(java development kit)=JRE+javac.exe+java.exe
+JRE(java runtime environment)=JVM+Java类库+Java命令
+
+JDK是功能齐全的 Java SDK  
+
+JDK(java development kit)=JRE+编译器javac.exe+⼯具（如 javadoc 和 jdb）  
 
 -------------------------
 
@@ -14,7 +16,7 @@ java源程序 .java
 
 ​			↓
 
-编译器compiler
+编译器javac
 
 ​			↓
 
@@ -23,8 +25,6 @@ java字节码文件 .class
 ​			↓
 
  		 JVM
-
-------------------
 
 eg.
 
@@ -124,18 +124,19 @@ Class
 
 4、在包下新建类
 
-#快捷键
+#IDEA快捷键
 
 ##ctrl
 Ctrl + F 在当前文件进行文本查找 （必备）
 Ctrl + R 在当前文件进行文本替换 （必备）
+
 Ctrl + W 递进式选择代码块。可选中光标所在的单词或段落，连续按会在原有选中的基础上再扩展选中范围（必备）
 
 Ctrl + Y 删除光标所在行 或 删除选中的行 （必备）
 Ctrl + D 复制光标所在行 或 复制选择内容，并把复制内容插入光标位置下面 （必备）
 
 Ctrl + E 显示最近打开的文件记录列表 （必备）
-Ctrl + N 根据输入的 名/类名 查找类文件 （必备）
+Ctrl + N 根据输入的名/类名 查找类文件 （必备）
 
 Ctrl + U 前往当前光标所在的方法的父类的方法 / 接口定义 （必备）
 Ctrl + B 进入光标所在的方法/变量的接口或是定义处，等效于 Ctrl + 左键单击 （必备）
