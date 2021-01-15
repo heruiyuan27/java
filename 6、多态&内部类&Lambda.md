@@ -43,7 +43,7 @@ System.out.println(c.weight);
 
 多态：**动态绑定**的结果， 属于**运行**时的现象。 
 
-<img src="C:\Users\Hery\Desktop\GitHub\java\image\image-20200204163931533.png" alt="image-20200204163931533" style="zoom: 50%;" />
+<img src="C:\Users\Hery\Desktop\GitHub\java\image\image-20200204163931533.png" alt="image-20200204163931533" style="zoom: 33%;" />
 
 
 多态的前提
@@ -74,7 +74,8 @@ public abstract class Animal {
 - 抽象类有==抽象方法【没有方法体】==，也可以有==普通方法==
 - 抽象类不能实例化
 - 抽象类主要是用来派生(derive)子类，且在子类中必须==重写抽象类中的所有抽象方法==，实现多态
-- 如果没有实现，则子类也必须定义为抽象类。
+
+  如果没有实现，则子类也必须定义为抽象类。
 - static 、private 和final修饰符不能修饰抽象方法和抽象类 。
 
 ##接口及其多态
@@ -84,7 +85,7 @@ public abstract class Animal {
 - 接口是一种更特殊的抽象类，内部只允许包含==常量==和==抽象方法==。
 - 成员变量默认修饰符==public static final==【可以不写
 - 成员方法默认修饰符==public abstract==【可以不写
--接口规范公共操作方法，不实现具体操作细节。　
+接口规范公共操作方法，不实现具体操作细节。　
 
 
 ```java
@@ -175,8 +176,6 @@ public interface Inter3 extends Inter1,Inter2 {
 抽象类作为形参和返回值  ：子类对象
 
 接口名作为形参和返回值  ：实现类对象
-
-
 
 # 内部类
 
