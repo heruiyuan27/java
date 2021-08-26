@@ -2,13 +2,21 @@
 
 跨平台【win mac linux】原理:通过JVM【java虚拟机】实现
 
+-------------
+
 JRE 是Java运行时环境
 
-JRE(java runtime environment)=JVM+Java类库+Java命令
+JRE(java runtime environment)===JVM+Java核心类库==
+
+运行Java程序
+
+
 
 JDK是功能齐全的 Java SDK  
 
-JDK(java development kit)=JRE+编译器javac.exe+⼯具（如 javadoc 和 jdb）  
+JDK(java development kit)===JRE+编译器javac.exe+⼯具（如 javadoc 和 jdb==
+
+开发+运行 Java程序
 
 -------------------------
 
