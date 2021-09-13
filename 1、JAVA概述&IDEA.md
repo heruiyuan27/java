@@ -165,12 +165,19 @@ ctrl+shift+up/down 移动语句
 Alt + Enter IntelliJ IDEA 根据光标所在问题，提供快速修复选择，光标放在的位置不同提示的结果也不同 （必备）
 Alt + Insert 代码自动生成，如生成对象的 set / get 方法，构造函数，toString() 等 （必备）
 
+## alt+Enter
+
+导入包，
+
+自动修正代码 解决出现的问题 
+
+也可以生成返回值。
+
 ##其他
 
 psvm=public static void main（String[] args）
 sout=System.out.println（）
 iter
-修改相同文字：shift+F6
 
 
 
