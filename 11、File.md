@@ -68,6 +68,7 @@ public class Test3 {
 
     public static void getAllFile(File srcFile){
         File[] files = srcFile.listFiles();
+        
         if(files!=null){
             for(File file:files){
                 if(file.isFile()){
@@ -77,6 +78,7 @@ public class Test3 {
                 }
             }
         }
+        
     }
 }
 ```
