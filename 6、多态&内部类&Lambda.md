@@ -7,8 +7,6 @@
 2. parent引用的是子类实例
 3. parent只能引用与父类成员同名的那些成员
 
-
-
 典型多态
 
 1. parent.变量，引用的是父类中的变量【变量：静态绑定
@@ -26,6 +24,7 @@ System.out.println(a.age);//变量-静态绑定，动物年龄5000
 ## 向下转型(downcasting)
 
 ```java
+Animal a=new Cat();
 Cat c=(Cat)a;
 c.eat();
 c.playGame();
@@ -64,7 +63,7 @@ System.out.println(c.weight);
 - 弊端
 不能使用子类的特有成员。
 
-##抽象类及其多态
+## 抽象类及其多态
 
 ```java
 //抽象类的定义
@@ -76,16 +75,16 @@ public abstract class Animal {
 
 ```
 抽象类特点：
-- 抽象类有==抽象方法【没有方法体】==，也可以有==普通方法==
+- 抽象类有 ==抽象方法【没有方法体】==，也可以有==普通方法==
 - 抽象类不能实例化
-- 抽象类主要是用来派生(derive)子类，且在子类中必须==重写抽象类中的所有抽象方法==，实现多态
+- 抽象类主要是用来派生(derive)子类，且在子类中必须 ==重写抽象类中的所有抽象方法==，实现多态
 
   如果没有实现，则子类也必须定义为抽象类。
 - static 、private 和final修饰符不能修饰抽象方法和抽象类 。
 
-##接口及其多态
+## 接口及其多态
 
-###**接口特点**
+### **接口特点**
 
 - 接口是一种更特殊的抽象类，内部只允许包含==常量==和==抽象方法==。
 - 成员变量默认修饰符==public static final==【可以不写
@@ -99,7 +98,7 @@ public interface Jumping {
     public abstract void jump();
 }
 ```
-###**接口实现类**
+### **接口实现类**
 
 - 重写接口抽象方法
 - 定义为抽象类
@@ -115,7 +114,7 @@ public class Cat implements Jumping {
 
 <img src="C:\Users\Hery\Desktop\GitHub\java\image\image-20200205105942183.png" alt="image-20200205105942183" style="zoom:50%;" />
 
-###**接口默认/静态/私有方法**
+### **接口默认/静态/私有方法**
 
 ```java
 public default void run() {
@@ -147,9 +146,9 @@ private static void method() {
 - 默认方法可以调用私有的静态方法和非静态方法
 - 静态方法只能调用私有的静态方法  
 
-#类和接口的关系
+# 类和接口的关系
 
-##继承与实现
+## 继承与实现
 
 1、类和类：==继承关系==【单继承，但是可以多层继】
 
@@ -174,7 +173,7 @@ public interface Inter3 extends Inter1,Inter2 {
 - 接口：
 常量；抽象方法  
 
-##参数传递
+## 参数传递
 
 类名作为形参和返回值：该类对象
 
@@ -187,7 +186,7 @@ public interface Inter3 extends Inter1,Inter2 {
 - 内部类可以直接访问外部类的成员，包括私有
 - 外部类要访问内部类的成员，必须创建对象  
 
-##成员内部类
+##  成员内部类
 
 ==public Inner==：
 
@@ -214,7 +213,7 @@ public class Outer {
 }
 ```
 
-##局部内部类
+## 局部内部类
 
 局部内部类是在方法中定义的类  
 
@@ -241,7 +240,7 @@ public class Outer {
 局部内部类，外界是无法直接使用，需要在方法内部创建对象并使用
 该类可以直接访问外部类的成员，也可以访问方法内的局部变量  
 
-##匿名内部类（重要）
+## 匿名内部类（重要）
 
 通常使用接口方式：
 
@@ -279,7 +278,7 @@ public class Test {
 }
 ```
 
-#Lambda
+# Lambda
 
 Lambda表达式是函数式思想的体现  
 
@@ -306,7 +305,7 @@ Runnable r = () -> System.out.println("Lambda表达式");
 
 new Thread(() -> System.out.println("Lambda表达式")).start();  
 
-##Lambda和匿名内部类的区别
+## Lambda和匿名内部类的区别
 
 - 实现原理不同
   匿名内部类：编译之后，产生一个单独的.class字节码文件
