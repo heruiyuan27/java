@@ -108,13 +108,13 @@ cd 或cd1\2 →前进 或多级前进
 
 参数/p表示可以使用户在删除多个文件时对每个文件都显示删除询问。
 
-###其他
+### 其他
 
 cls清屏
 
 exit
 
-#文件结构
+# 文件结构
 
 Project
 
@@ -134,7 +134,7 @@ Class
 
 #IDEA快捷键
 
-##ctrl
+## ctrl
 Ctrl + F 在当前文件进行文本查找 （必备）
 Ctrl + R 在当前文件进行文本替换 （必备）
 
@@ -156,28 +156,21 @@ Ctrl + Alt + L 格式化代码，可以对当前文件和整个包目录使用 �
 Ctrl + Alt + O 优化导入的类，可以对当前文件和整个包目录使用 （必备）
 Ctrl + Alt + T 对选中的代码弹出环绕选项弹出层 （必备）
 
-##ctrl+shift
+## ctrl+shift
 
 ctrl+shift+up/down 移动语句
 
-##alt+insert
+## alt+insert
 
-Alt + Enter IntelliJ IDEA 根据光标所在问题，提供快速修复选择，光标放在的位置不同提示的结果也不同 （必备）
 Alt + Insert 代码自动生成，如生成对象的 set / get 方法，构造函数，toString() 等 （必备）
 
 ## alt+Enter
 
-导入包，
+Alt + Enter IntelliJ IDEA 根据光标所在问题，提供快速修复选择，光标放在的位置不同提示的结果也不同 （必备）
+导入包，自动修正代码 解决出现的问题 也可以生成返回值。
 
-自动修正代码 解决出现的问题 
-
-也可以生成返回值。
-
-##其他
+## 其他
 
 psvm=public static void main（String[] args）
 sout=System.out.println（）
 iter
-
-
-
