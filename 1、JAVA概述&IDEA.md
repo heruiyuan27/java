@@ -48,7 +48,7 @@ java  HelloWorld
 
 2. 有且仅有一个主类 main（）
 
-#DOS简单操作
+# DOS简单操作
 
 dir,cd, md,rd,copy,del等
 
@@ -72,7 +72,7 @@ dir /p
 
 绝对路径 C:\Users\Hery>dir C:\Users\Hery\PycharmProjects
 
-###cd
+### cd
 
 cd命令只能进入当前盘符中的目录，其中“cd \”为返回到根目录，“cd..”为返回到上一层目录。
 
@@ -132,7 +132,7 @@ Class
 
 4、在包下新建类
 
-#IDEA快捷键
+# IDEA快捷键
 
 ## ctrl
 Ctrl + F 在当前文件进行文本查找 （必备）
@@ -151,7 +151,7 @@ Ctrl + B 进入光标所在的方法/变量的接口或是定义处，等效于 
 
 Ctrl + / 释光标所在行代码，会根据当前不同文件类型使用不同的注释符号 （必备）
 
-##ctrl+alt
+## ctrl+alt
 Ctrl + Alt + L 格式化代码，可以对当前文件和整个包目录使用 （必备）
 Ctrl + Alt + O 优化导入的类，可以对当前文件和整个包目录使用 （必备）
 Ctrl + Alt + T 对选中的代码弹出环绕选项弹出层 （必备）
